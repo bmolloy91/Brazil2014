@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:oneshot="true">
+    <item android:drawable="@drawable/wc1" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc2" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc3" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc4" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc5" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc6" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc7" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc8" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc9" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc10" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc11" android:duration="@string/time" />
+    <item android:drawable="@drawable/wc12" android:duration="@string/time" />
+
+</animation-list>
