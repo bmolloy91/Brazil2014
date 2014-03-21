@@ -1,22 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/dark_bg"
-    tools:context=".MainActivity" >
+    >
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	     >
+	    
+	    <TextView
+	        style="@style/heading"
+	        android:id="@+id/groupHeading"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:text="@string/fxt"/>
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupAtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupHeading"
+	        android:text="@string/groupA"/>
+	
+	    <ImageView
+	        android:id="@+id/groupA"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupAtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_a" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupBtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupA"
+	        android:text="@string/groupB"/>
+	
+	    <ImageView
+	        android:id="@+id/groupB"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupBtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_b" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupCtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupB"
+	        android:text="@string/groupC"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupC"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupCtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_c" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupDtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupC"
+	        android:text="@string/groupD"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupD"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupDtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_d" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupEtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupD"
+	        android:text="@string/groupE"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupE"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupEtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_e" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupFtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupE"
+	        android:text="@string/groupF"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupF"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupFtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_f" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupGtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupF"
+	        android:text="@string/groupG"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupG"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupGtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_g" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/groupHtext"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/groupG"
+	        android:text="@string/groupH"/>
+	    
+	    <ImageView
+	        android:id="@+id/groupH"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/groupHtext"
+	        android:layout_centerHorizontal="true"
+	        android:src="@drawable/group_h" />
 
-    <ListView
-        style="@style/listStyle"
-        android:id="@+id/groupList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" >
-    </ListView>
-
-</RelativeLayout>
+	    
+	
+	</RelativeLayout>
+</ScrollView>

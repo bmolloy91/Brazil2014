@@ -12,21 +12,23 @@ import android.widget.Button;
 public class MainActivity extends Activity implements View.OnClickListener {
 
 	Button groupBtn;
+	Button fxtBtn;
 	Button teamsBtn;
 	Button winBtn;
-	UserDetailsDB myDB;
+	
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		//this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.menu_activity);
 		
-		myDB = new UserDetailsDB(this);
-		myDB.open();
+		
 		
 		
 		groupBtn=(Button)findViewById(R.id.groupBut);
         groupBtn.setOnClickListener(this);
+        fxtBtn=(Button)findViewById(R.id.fxtBut);
+        fxtBtn.setOnClickListener(this);
         teamsBtn=(Button)findViewById(R.id.teamBut);
         teamsBtn.setOnClickListener(this);
         winBtn=(Button)findViewById(R.id.winnerBut);
@@ -42,14 +44,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	    	startActivity(intent);
 	    	break;
 	    	
-		case R.id.winnerBut:
-			Intent intent1 = new Intent(this, PickWinner.class);
-	    	startActivity(intent1);
+		case R.id.fxtBut:
+			Intent intent2 = new Intent(this, Fixtures.class);
+	    	startActivity(intent2);
+	    	break;
+	    	 	
+		case R.id.teamBut:
+			Intent intent3 = new Intent(this, Teams.class);
+	    	startActivity(intent3);
 	    	break;
 	    	
-		case R.id.teamBut:
-			Intent intent2 = new Intent(this, Teams.class);
-	    	startActivity(intent2);
+		case R.id.winnerBut:
+			Intent intent1 = new Intent(this, Predictions.class);
+	    	startActivity(intent1);
 	    	break;
 		}
 	    

@@ -12,8 +12,7 @@ import android.widget.Toast;
 public class Groups extends Activity {
 	
 
-
-    @Override
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.groups_activity);

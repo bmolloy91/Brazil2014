@@ -10,6 +10,20 @@
     <string name="stars">Star Players</string>
     <string name="winner">Pick a Winner</string>
     <string name="winner_details">Enter your name, country and who you think will win the 2014 World Cup</string>
-    <string name="country">Country</string>
-
+    <string name="name">Name: </string>
+    <string name="country">Country: </string>
+    <string name="pickWin">Winner: </string>
+    <string name="nameHint">Name </string>
+    <string name="countryHint">Home country </string>
+    <string name="winnerHint">World Cup 2014 Winner </string>
+	<string name="submit">Submit</string>
+	<string name="predictions">Predictions</string>
+	<string name="groupA">Group A</string>
+	<string name="groupB">Group B</string>
+	<string name="groupC">Group C</string>
+	<string name="groupD">Group D</string>
+	<string name="groupE">Group E</string>
+	<string name="groupF">Group F</string>
+	<string name="groupG">Group G</string>
+	<string name="groupH">Group H</string>
 </resources>

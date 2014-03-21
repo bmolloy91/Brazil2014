@@ -3,21 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dark_bg"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/dark_bg"
     tools:context=".MainActivity" >
 
-    <ListView
-        style="@style/listStyle"
-        android:id="@+id/teamList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        style="@style/heading"
+        android:id="@+id/team_heading"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:cacheColorHint="@android:color/transparent"  >
+        android:text="@string/teams" >
+    </TextView>
+
+    <ListView
+        android:id="@+id/teamList"
+        style="@style/listStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/team_heading"
+        android:layout_centerHorizontal="true"
+        android:dividerHeight="0dp"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent" >
     </ListView>
 
 </RelativeLayout>
