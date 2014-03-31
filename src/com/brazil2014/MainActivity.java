@@ -1,19 +1,21 @@
 package com.brazil2014;
 
-
-
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity implements View.OnClickListener {
+	
+	public final static String ID_EXTRA = "com.brazil2014._ID";
 
 	Button groupBtn;
 	Button fxtBtn;
 	Button teamsBtn;
+	Button starsBtn;
 	Button winBtn;
 	
 	
@@ -22,17 +24,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		//this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.menu_activity);
 		
-		
-		
-		
 		groupBtn=(Button)findViewById(R.id.groupBut);
         groupBtn.setOnClickListener(this);
         fxtBtn=(Button)findViewById(R.id.fxtBut);
         fxtBtn.setOnClickListener(this);
         teamsBtn=(Button)findViewById(R.id.teamBut);
         teamsBtn.setOnClickListener(this);
+        starsBtn=(Button)findViewById(R.id.starsBut);
+        starsBtn.setOnClickListener(this);
         winBtn=(Button)findViewById(R.id.winnerBut);
         winBtn.setOnClickListener(this);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+		
 	}
 	
 	public void onClick (View view) {
@@ -45,7 +53,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	    	break;
 	    	
 		case R.id.fxtBut:
-			Intent intent2 = new Intent(this, Fixtures.class);
+			Intent intent2 = new Intent(this, FixtureSelect.class);
 	    	startActivity(intent2);
 	    	break;
 	    	 	
@@ -53,6 +61,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 			Intent intent3 = new Intent(this, Teams.class);
 	    	startActivity(intent3);
 	    	break;
+	    	
+		case R.id.starsBut:
+			Intent intent4 = new Intent(this, Stars.class);
+			startActivity(intent4);
+			break;
 	    	
 		case R.id.winnerBut:
 			Intent intent1 = new Intent(this, Predictions.class);
@@ -63,12 +76,4 @@ public class MainActivity extends Activity implements View.OnClickListener {
     	
     	
     }
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
 }

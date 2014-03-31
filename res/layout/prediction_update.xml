@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dark_bg"
+    android:paddingRight="4dp"
+    android:paddingLeft="4dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    >
+
+    <TextView
+        android:textSize="12pt"
+        android:gravity="center_horizontal"
+        android:id="@+id/formHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/winner_details"
+        android:textColor="@color/yellow" />
+
+    <TextView
+        style="@style/playerStats"
+        android:id="@+id/nameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+
+    <EditText
+        android:id="@+id/Names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nameHint"
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        style="@style/playerStats"
+        android:id="@+id/countryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/country"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/Country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/countryHint"
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" />
+
+    <TextView
+        style="@style/playerStats"
+        android:id="@+id/winnerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pickWin" />
+
+    <AutoCompleteTextView
+        android:id="@+id/Winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/winnerHint"
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" />
+
+    <Button
+        style="@style/mainBut1"
+        android:id="@+id/updateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/update"
+        android:textSize="15pt" />
+    <Button
+        style="@style/mainBut1"
+        android:id="@+id/deleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="@string/delete"
+        android:textSize="15pt" />
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dark_bg"
+    android:paddingRight="4dp"
+    android:paddingLeft="4dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    >
+	<RelativeLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	     >
+	    
+	    <TextView
+	        style="@style/heading"
+	        android:id="@+id/koHeading"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:gravity="center"
+	        android:text="@string/ko"/>
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/round16text"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/koHeading"
+	        android:text="@string/round16"/>
+	
+	    <ImageView
+	        android:id="@+id/round16"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/round16text"
+	        android:layout_centerHorizontal="true"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/round16" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/qfText"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/round16"
+	        android:text="@string/quarter"/>
+	
+	    <ImageView
+	        android:id="@+id/qf"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/qfText"
+	        android:layout_centerHorizontal="true"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/quarter" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/semiText"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/qf"
+	        android:text="@string/semi"/>
+	    
+	    <ImageView
+	        android:id="@+id/semi"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/semiText"
+	        android:layout_centerHorizontal="true"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/semi" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/thirdText"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/semi"
+	        android:text="@string/third"/>
+	    
+	    <ImageView
+	        android:id="@+id/third"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/thirdText"
+	        android:layout_centerHorizontal="true"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/third" />
+	    
+	    <TextView
+	        style="@style/groupHeading"
+	        android:id="@+id/finalText"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/third"
+	        android:text="@string/wc_final"/>
+	    
+	    <ImageView
+	        android:id="@+id/wc_final"
+	        android:layout_width="fill_parent"
+	        android:paddingTop="2dp"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/finalText"
+	        android:layout_centerHorizontal="true"
+	        android:adjustViewBounds="true"
+	        android:src="@drawable/wc_final" />
+
+	    <Button
+	        android:id="@+id/GS"
+	        style="@style/but2"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/wc_final"
+	        android:text="@string/groupStage" />
+
+	    </RelativeLayout>
+</ScrollView>

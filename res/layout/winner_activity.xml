@@ -3,7 +3,12 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:background="@drawable/listbg"
+    android:background="@drawable/dark_bg"
+    android:paddingRight="4dp"
+    android:paddingLeft="4dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    
     >
 
     <TextView
@@ -16,56 +21,62 @@
         android:textColor="@color/yellow" />
 
     <TextView
+        style="@style/playerStats"
         android:id="@+id/nameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/name"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/name" />
 
     <EditText
         android:id="@+id/editName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nameHint"
-        android:inputType="textCapSentences" >
-
-        <requestFocus />
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" >
     </EditText>
 
     <TextView
+        style="@style/playerStats"
         android:id="@+id/countryView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/country"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <EditText
+        android:text="@string/country" />
+    
+	<AutoCompleteTextView
+	    
         android:id="@+id/editCountry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/countryHint"
-        android:inputType="textCapSentences" />
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" />
+    
 
     <TextView
+        style="@style/playerStats"
         android:id="@+id/winnerView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pickWin"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:text="@string/pickWin"/>
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/editWinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/winnerHint"
-        android:inputType="textCapSentences" />
+        android:inputType="textCapSentences"
+        android:textColor="@color/yellow" />
 
     <Button
+        style="@style/mainBut1"
         android:id="@+id/submitBtn"
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
         android:paddingTop="10dp"
         android:text="@string/submit"
         android:textSize="15pt" />

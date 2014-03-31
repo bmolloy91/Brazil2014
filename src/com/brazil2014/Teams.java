@@ -11,6 +11,12 @@ import android.widget.Toast;
 
 	public class Teams extends Activity
 	{
+		//create list
+		public static String[] teams = {"Brazil", "Algeria", "Argentina", "Australia","Belgium",
+				"Bosnia and Herzegovina","Cameroon", "Chile", "Colombia", "Costa Rica",
+				"Croatia", "Ecuador", "England", "France", "Germany", "Ghana", "Greece", "Honduras"
+				, "Iran", "Italy", "Japan", "Korea Republic", "Mexico", "Netherlands", "Nigeria",
+				"Portugal", "Russia", "Spain", "Switzerland", "Uruguay", "USA"};
 	
 		protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,12 +29,7 @@ import android.widget.Toast;
 		
 		private void populateListView()
 		{
-			//create list
-			String[] teams = {"Brazil", "Algeria", "Argentina", "Australia","Belgium",
-					"Bosnia and Herzegovina","Cameroon", "Chile", "Colombia", "Costa Rica",
-					"Croatia", "Ecuador", "England", "France", "Germany", "Ghana", "Greece", "Honduras"
-					, "Iran", "Italy", "Japan", "Korea Republic", "Mexico", "Netherlands", "Nigeria",
-					"Portugal", "Russia", "Spain", "Switzerland", "Uraguay", "USA"};
+			
 			
 			//build adapter
 			ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.teams, teams);

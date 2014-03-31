@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dark_bg" >
+    
+    <TextView
+	    style="@style/heading2"
+	    android:id="@+id/suarezText"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentTop="true"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:text="@string/suarez" />
+
+    <ImageView
+        android:id="@+id/suarez"
+        android:paddingTop="2dp"
+        android:layout_width="170dp"
+        android:layout_height="180dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/suarezText"
+        android:adjustViewBounds="true"
+        android:src="@drawable/suarez" />
+    
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/suarez"
+        android:layout_centerHorizontal="true" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/nation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nationality" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/nationality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Uruguay" />
+
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/age" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/Age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 26" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/caps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/caps" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/capNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 77" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/goals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goals" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/goalNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 38" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/debut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/debut" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/debutDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 8/2/2007 (Colombia)" />
+
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/playerStatsHeading"
+                android:id="@+id/club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/club" />
+
+            <TextView
+                style="@style/playerStats"
+                android:id="@+id/clubName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Liverpool" />
+
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

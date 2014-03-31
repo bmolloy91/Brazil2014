@@ -112,7 +112,62 @@ public class UserDetailsDB {
 		}
 		return mCursor;
 	}
-	public boolean updatePerson(long rowId, String name, String country, int winner )
+	
+	public Cursor getName(long rowId)
+	{
+
+		Cursor mCursor = 
+				db.query(true, DATABASE_TABLE, new String[]
+						{
+						
+							KEY_USERNAME,
+						},
+						KEY_ROWID + "=" + rowId, null, null, null, null, null);
+		if (mCursor != null)
+		{
+			mCursor.moveToFirst();
+		}
+		return mCursor;
+	
+	}
+	
+	public Cursor getCountry(long rowId)
+	{
+
+		Cursor mCursor = 
+				db.query(true, DATABASE_TABLE, new String[]
+						{
+						
+							KEY_COUNTRY,
+						},
+						KEY_ROWID + "=" + rowId, null, null, null, null, null);
+		if (mCursor != null)
+		{
+			mCursor.moveToFirst();
+		}
+		return mCursor;
+	
+	}
+	
+	public Cursor getWinner(long rowId)
+	{
+
+		Cursor mCursor = 
+				db.query(true, DATABASE_TABLE, new String[]
+						{
+						
+							KEY_WINNER,
+						},
+						KEY_ROWID + "=" + rowId, null, null, null, null, null);
+		if (mCursor != null)
+		{
+			mCursor.moveToFirst();
+		}
+		return mCursor;
+	
+	}
+	
+	public boolean updatePerson(long rowId, String name, String country, String winner )
 	{
 		ContentValues args = new ContentValues();
 		args.put(KEY_USERNAME, name);

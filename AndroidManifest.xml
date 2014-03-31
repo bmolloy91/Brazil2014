@@ -5,7 +5,7 @@
     android:versionName="1.0" android:installLocation="auto">
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
 
     <application
@@ -27,7 +27,7 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         
@@ -45,12 +45,39 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.brazil2014.KOFixtures"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.brazil2014.FixtureSelect"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
             </intent-filter>
         </activity>
         
         <activity
             android:name="com.brazil2014.Teams"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.brazil2014.Stars"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -69,6 +96,15 @@
         
         <activity
             android:name="com.brazil2014.PickWinner"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.brazil2014.UpdateActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,100 +2,112 @@
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	    android:layout_width="fill_parent"
 	    android:layout_height="fill_parent"
-	    android:orientation="horizontal" >
-	
-	    <TableLayout
-	        android:layout_gravity="center_horizontal"
-	        android:layout_width="fill_parent"
-	        android:layout_height="fill_parent"
-	    	android:background="@drawable/bg"
-	    	android:paddingTop="3dp"
-	    	android:paddingBottom="5dp" >
-	
-	        <TableRow
-	            android:id="@+id/tableRow1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:gravity="center_horizontal"
-	            android:weightSum="10" >
-	
-	            <Button
-	                android:id="@+id/groupBut"
-	                style="@style/mainBut1"
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:layout_weight="5"
-	                android:text="@string/group" />
-	        </TableRow>
-	
-	        <TableRow
-	            android:gravity="center_horizontal"
-	            android:id="@+id/tableRow2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:weightSum="10" >
-	
-	            <Button
-	                android:id="@+id/fxtBut"
-	                style="@style/mainBut1"
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/fxt"
-	                android:layout_weight="5" />
-	
-	        </TableRow>
-	
-	        <TableRow
-	            android:gravity="center_horizontal"
-	            android:id="@+id/tableRow3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:weightSum="10" >
-	
-	            <Button
-	                android:id="@+id/teamBut"
-	                style="@style/mainBut1"
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/teams" 
-	                android:layout_weight="5"/>
-	
-	        </TableRow>
-	
-	        <TableRow
-	            android:gravity="center_horizontal"
-	            android:id="@+id/tableRow4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content" 
-	            android:weightSum="10">
-	
-	            <Button
-	                android:id="@+id/starsBut"
-	                style="@style/mainBut1"
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/stars" 
-	                android:layout_weight="5"/>
-	
-	        </TableRow>
-	
-	        <TableRow
-	            android:gravity="center_horizontal"
-	            android:id="@+id/tableRow5"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:weightSum="10" >
-	
-	            <Button
-	                android:id="@+id/winnerBut"
-	                style="@style/mainBut1"
-	                android:layout_width="fill_parent"
-	                android:layout_height="wrap_content"
-	                android:text="@string/winner"
-	                android:layout_weight="5" />
-	
-	        </TableRow>
-	
-	    </TableLayout>
+	    android:orientation="horizontal"
+	    android:background="@drawable/bg1"
+	    android:layout_gravity="center_horizontal"
+	    android:paddingRight="4dp"
+	    android:paddingLeft="4dp"
+	    android:paddingTop="4dp"
+	    android:paddingBottom="4dp" >
+
+		<TableLayout
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:background="@android:color/transparent"
+		    
+		    android:paddingBottom="5dp"
+		    android:paddingTop="3dp" >
+
+		    <TableRow
+		        android:id="@+id/tableRow1"
+		        android:layout_width="fill_parent"
+		        android:layout_height="fill_parent"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1" >
+		        
+		    <ImageView
+			    android:id="@+id/imageView1"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:src="@drawable/main_logo"
+			    android:adjustViewBounds="true" />
+		    </TableRow>
+		    
+		    <TableRow
+		        android:id="@+id/tableRow2"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1" >
+
+		        <Button
+		            android:id="@+id/groupBut"
+		            style="@style/mainBut1"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/group" />
+		    </TableRow>
+
+		    <TableRow
+		        android:id="@+id/tableRow3"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1" >
+
+		        <Button
+		            android:id="@+id/fxtBut"
+		            style="@style/mainBut1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/fxt" />
+		    </TableRow>
+
+		    <TableRow
+		        android:id="@+id/tableRow4"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1" >
+
+		        <Button
+		            android:id="@+id/teamBut"
+		            style="@style/mainBut1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/teams" />
+		    </TableRow>
+
+		    <TableRow
+		        android:id="@+id/tableRow5"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1" >
+
+		        <Button
+		            android:id="@+id/starsBut"
+		            style="@style/mainBut1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/stars" />
+		    </TableRow>
+
+		    <TableRow
+		        android:id="@+id/tableRow6"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:gravity="center_horizontal"
+		        android:layout_weight="1"
+		        android:padding="5dip" >
+
+		        <Button
+		            android:id="@+id/winnerBut"
+		            style="@style/mainBut1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/winner" />
+		    </TableRow>
+		</TableLayout>
 
 </LinearLayout>
