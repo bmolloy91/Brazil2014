@@ -70,15 +70,19 @@
         android:inputType="textCapSentences"
         android:textColor="@color/yellow" />
 
+    <Spinner 
+        android:id="@+id/country_spin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
     <Button
         style="@style/mainBut1"
         android:id="@+id/submitBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25pt"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:paddingTop="10dp"
-        android:text="@string/submit"
-        android:textSize="15pt" />
+        android:gravity="center"
+        android:text="@string/submit" />
 
 </LinearLayout>

@@ -157,14 +157,13 @@
 	        android:layout_centerHorizontal="true"
 	        android:adjustViewBounds="true"
 	        android:src="@drawable/group_h" />
-	    
+
 	    <Button
 	        android:id="@+id/KOS"
 	        style="@style/but2"
-	        
 	        android:layout_alignParentBottom="true"
-	        android:layout_alignParentRight="true"
 	        android:layout_below="@+id/groupH"
+	        android:layout_centerHorizontal="true"
 	        android:text="@string/ko" />
 
 	    </RelativeLayout>

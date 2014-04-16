@@ -73,21 +73,17 @@
         style="@style/mainBut1"
         android:id="@+id/updateBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25pt"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:paddingTop="10dp"
-        android:text="@string/update"
-        android:textSize="15pt" />
+        android:gravity="center"
+        android:text="@string/update" />
     <Button
         style="@style/mainBut1"
         android:id="@+id/deleteBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25pt"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:paddingTop="10dp"
-        android:text="@string/delete"
-        android:textSize="15pt" />
+        android:gravity="center"
+        android:text="@string/delete" />
 
 </LinearLayout>

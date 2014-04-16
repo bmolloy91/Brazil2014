@@ -1,6 +1,7 @@
 package com.brazil2014;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,6 +20,7 @@ public class PickWinner extends Activity implements View.OnClickListener{
 	String nameStr, countryStr, winStr;
 	UserDetailsDB myDB;
 	AutoCompleteTextView textView, textView2;
+	Spinner countrySpinner;
 	
 	
 	public static String[] countries = {"Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Bolivia",
@@ -55,18 +58,31 @@ public class PickWinner extends Activity implements View.OnClickListener{
         ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, Teams.teams);
         textView2.setThreshold(1);
         textView2.setAdapter(adapter2);
+        
+        
 	}
 
 	public void onClick (View view) {
 		nameStr=name.getText().toString();
 		countryStr=country.getText().toString();
 		winStr=win.getText().toString();
-		myDB.insertDetails(nameStr, countryStr, winStr);
-		String message = "Thank you, " + nameStr + ". Your choice was recorded";
-		Toast.makeText(PickWinner.this, message, Toast.LENGTH_SHORT).show();
-		Intent intent = new Intent(this, Predictions.class);
-		startActivity(intent);
-		finish();
+		
+		if(nameStr.equals("") || countryStr.equals("") || winStr.equals(""))
+		{
+			Context context = getApplicationContext();
+			String message = "Please complete All fields";
+			Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+		}
+		else
+		{
+			myDB.insertDetails(nameStr, countryStr, winStr);
+			String message = "Thank you, " + nameStr + ". Your choice was recorded";
+			Toast.makeText(PickWinner.this, message, Toast.LENGTH_SHORT).show();
+			Intent intent = new Intent(this, Predictions.class);
+			startActivity(intent);
+			finish();
+		}
+		
 	}
 
 }

@@ -1,6 +1,7 @@
 package com.brazil2014;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -72,16 +73,29 @@ public class UpdateActivity extends Activity{
         update.setOnClickListener(new OnClickListener()
         {
         	public void onClick (View view) {
+        		
         		nameStr=name.getText().toString();
         		countryStr=country.getText().toString();
         		winStr=win.getText().toString();
-        		myDB.updatePerson(id, nameStr, countryStr, winStr);
-        		String message = "Thank you, " + nameStr + ". Your choice was updated";
-        		Toast.makeText(UpdateActivity.this, message, Toast.LENGTH_SHORT).show();
-        		Intent intent = new Intent(UpdateActivity.this, Predictions.class);
         		
-        		startActivity(intent);
-        		finish();
+        		if(nameStr.equals("") || countryStr.equals("") || winStr.equals(""))
+        		{
+        			Context context = getApplicationContext();
+        			String message = "Please complete all fields";
+        			Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        			
+        		}
+        		else
+        		{
+        			myDB.updatePerson(id, nameStr, countryStr, winStr);
+            		String message = "Thank you, " + nameStr + ". Your choice was updated";
+            		Toast.makeText(UpdateActivity.this, message, Toast.LENGTH_SHORT).show();
+            		Intent intent = new Intent(UpdateActivity.this, Predictions.class);
+            		
+            		startActivity(intent);
+            		finish();
+        		}
+        		
         	}
         });
         delete=(Button)findViewById(R.id.deleteBtn);

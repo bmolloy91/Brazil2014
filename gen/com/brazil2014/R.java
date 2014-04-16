@@ -82,7 +82,7 @@ public final class R {
         public static final int KOS=0x7f090031;
         public static final int Names=0x7f090049;
         public static final int Winner=0x7f09004d;
-        public static final int action_settings=0x7f090057;
+        public static final int action_settings=0x7f090059;
         public static final int age=0x7f09000b;
         public static final int capNo=0x7f09000e;
         public static final int caps=0x7f09000d;
@@ -93,9 +93,9 @@ public final class R {
         public static final int debut=0x7f090013;
         public static final int debutDate=0x7f090014;
         public static final int deleteBtn=0x7f09004f;
-        public static final int editCountry=0x7f090054;
-        public static final int editName=0x7f090053;
-        public static final int editWinner=0x7f090055;
+        public static final int editCountry=0x7f090056;
+        public static final int editName=0x7f090055;
+        public static final int editWinner=0x7f090057;
         public static final int finalText=0x7f09003d;
         public static final int formHead=0x7f090047;
         public static final int fxtBut=0x7f090042;
@@ -148,7 +148,7 @@ public final class R {
         public static final int starsBut=0x7f090043;
         public static final int suarez=0x7f09001f;
         public static final int suarezText=0x7f09001e;
-        public static final int submitBtn=0x7f090056;
+        public static final int submitBtn=0x7f090058;
         public static final int tableRow1=0x7f090001;
         public static final int tableRow2=0x7f090003;
         public static final int tableRow3=0x7f090005;
@@ -158,6 +158,8 @@ public final class R {
         public static final int teamBut=0x7f090006;
         public static final int teamList=0x7f090052;
         public static final int team_heading=0x7f090051;
+        public static final int textView1=0x7f090053;
+        public static final int textView2=0x7f090054;
         public static final int third=0x7f09003c;
         public static final int thirdText=0x7f09003b;
         public static final int updateBtn=0x7f09004e;
@@ -177,14 +179,17 @@ public final class R {
         public static final int groups=0x7f030008;
         public static final int groups_activity=0x7f030009;
         public static final int ko_fixtures=0x7f03000a;
-        public static final int menu_activity=0x7f03000b;
-        public static final int people=0x7f03000c;
-        public static final int prediction_list=0x7f03000d;
-        public static final int prediction_update=0x7f03000e;
-        public static final int stars_activity=0x7f03000f;
-        public static final int team_activity=0x7f030010;
-        public static final int teams=0x7f030011;
-        public static final int winner_activity=0x7f030012;
+        public static final int map_activity=0x7f03000b;
+        public static final int menu_activity=0x7f03000c;
+        public static final int people=0x7f03000d;
+        public static final int prediction_list=0x7f03000e;
+        public static final int prediction_update=0x7f03000f;
+        public static final int single_row=0x7f030010;
+        public static final int stars_activity=0x7f030011;
+        public static final int team_activity=0x7f030012;
+        public static final int team_page=0x7f030013;
+        public static final int teams=0x7f030014;
+        public static final int winner_activity=0x7f030015;
     }
     public static final class menu {
         public static final int main=0x7f080000;

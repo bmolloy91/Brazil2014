@@ -36,7 +36,7 @@
         style="@style/mainBut1"
         android:id="@+id/createBtn"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="25pt"
         android:layout_below="@android:id/list"
         android:layout_centerHorizontal="true"
         android:text="@string/create" />

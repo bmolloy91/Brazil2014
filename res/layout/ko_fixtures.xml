@@ -112,7 +112,7 @@
 	        android:id="@+id/GS"
 	        style="@style/but2"
 	        android:layout_alignParentBottom="true"
-	        android:layout_alignParentRight="true"
+	        android:layout_centerHorizontal="true"
 	        android:layout_below="@+id/wc_final"
 	        android:text="@string/groupStage" />
 
