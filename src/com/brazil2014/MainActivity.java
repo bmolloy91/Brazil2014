@@ -14,7 +14,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 	Button groupBtn;
 	Button fxtBtn;
-	Button teamsBtn;
+	Button stadiumBtn;
 	Button starsBtn;
 	Button winBtn;
 	
@@ -28,8 +28,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         groupBtn.setOnClickListener(this);
         fxtBtn=(Button)findViewById(R.id.fxtBut);
         fxtBtn.setOnClickListener(this);
-        teamsBtn=(Button)findViewById(R.id.teamBut);
-        teamsBtn.setOnClickListener(this);
+        stadiumBtn=(Button)findViewById(R.id.stadiumBut);
+        stadiumBtn.setOnClickListener(this);
         starsBtn=(Button)findViewById(R.id.starsBut);
         starsBtn.setOnClickListener(this);
         winBtn=(Button)findViewById(R.id.winnerBut);
@@ -57,8 +57,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	    	startActivity(intent2);
 	    	break;
 	    	 	
-		case R.id.teamBut:
-			Intent intent3 = new Intent(this, Teams.class);
+		case R.id.stadiumBut:
+			Intent intent3 = new Intent(this, Stadiums.class);
 	    	startActivity(intent3);
 	    	break;
 	    	

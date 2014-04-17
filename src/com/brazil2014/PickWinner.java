@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class PickWinner extends Activity implements View.OnClickListener{
 	
-	TextView name, country, win;
+	TextView name, country;
 	Button submit;
 	String nameStr, countryStr, winStr;
 	UserDetailsDB myDB;
@@ -44,7 +44,7 @@ public class PickWinner extends Activity implements View.OnClickListener{
         
         name=(EditText)findViewById(R.id.editName);
         country=(EditText)findViewById(R.id.editCountry);
-        win=(EditText)findViewById(R.id.editWinner);
+        countrySpinner=(Spinner)findViewById(R.id.country_spinner);
         submit=(Button)findViewById(R.id.submitBtn);
         submit.setOnClickListener(this);
         
@@ -53,11 +53,10 @@ public class PickWinner extends Activity implements View.OnClickListener{
         textView.setThreshold(2);
         textView.setAdapter(adapter);
         
-        
-        textView2 = (AutoCompleteTextView) findViewById(R.id.editWinner);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, Teams.teams);
-        textView2.setThreshold(1);
-        textView2.setAdapter(adapter2);
+        countrySpinner = (Spinner)findViewById(R.id.country_spinner);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Teams.teams);
+        adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        countrySpinner.setAdapter(adapter2);
         
         
 	}
@@ -65,7 +64,8 @@ public class PickWinner extends Activity implements View.OnClickListener{
 	public void onClick (View view) {
 		nameStr=name.getText().toString();
 		countryStr=country.getText().toString();
-		winStr=win.getText().toString();
+		String selectedCountry = countrySpinner.getSelectedItem().toString();
+		winStr=selectedCountry;
 		
 		if(nameStr.equals("") || countryStr.equals("") || winStr.equals(""))
 		{

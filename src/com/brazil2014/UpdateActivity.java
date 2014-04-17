@@ -10,17 +10,19 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class UpdateActivity extends Activity{
 	
-	TextView name, country, win;
+	TextView name, country;
+	Spinner countrySpinner;
 	Button update, delete;
 	String nameStr, countryStr, winStr;
 	UserDetailsDB myDB;
 	int id;
-	AutoCompleteTextView textView, textView2;
+	AutoCompleteTextView textView;
 	Cursor Cursor1, Cursor2, Cursor3;
 	
 	@Override
@@ -34,7 +36,7 @@ public class UpdateActivity extends Activity{
 		myDB.open();
 		name=(TextView)findViewById(R.id.Names);
         country=(TextView)findViewById(R.id.Country);
-        win=(TextView)findViewById(R.id.Winner);
+        countrySpinner=(Spinner)findViewById(R.id.update_spinner);
         
         textView = (AutoCompleteTextView) findViewById(R.id.Country);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, PickWinner.countries);
@@ -42,10 +44,10 @@ public class UpdateActivity extends Activity{
         textView.setAdapter(adapter);
         
         
-        textView2 = (AutoCompleteTextView) findViewById(R.id.Winner);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, Teams.teams);
-        textView2.setThreshold(1);
-        textView2.setAdapter(adapter2);
+        countrySpinner = (Spinner)findViewById(R.id.country_spinner);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Teams.teams);
+        adapter2.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
+        countrySpinner.setAdapter(adapter2);
         
 		Cursor1 = myDB.getName(id);
 		if(Cursor1.moveToFirst())
@@ -64,8 +66,7 @@ public class UpdateActivity extends Activity{
 		Cursor3 = myDB.getWinner(id);
 		if(Cursor3.moveToFirst())
 		{
-			String s1 = Cursor3.getString(0);
-			win.setText(s1);
+			countrySpinner.setSelection(0);
 		}
 		
         
@@ -76,9 +77,10 @@ public class UpdateActivity extends Activity{
         		
         		nameStr=name.getText().toString();
         		countryStr=country.getText().toString();
-        		winStr=win.getText().toString();
+        		String selectedCountry = countrySpinner.getSelectedItem().toString();
+        		winStr=selectedCountry;
         		
-        		if(nameStr.equals("") || countryStr.equals("") || winStr.equals(""))
+        		if(nameStr.equals("") || countryStr.equals(""))
         		{
         			Context context = getApplicationContext();
         			String message = "Please complete all fields";
@@ -104,7 +106,8 @@ public class UpdateActivity extends Activity{
         	public void onClick (View view) {
         		nameStr=name.getText().toString();
         		countryStr=country.getText().toString();
-        		winStr=win.getText().toString();
+        		String selectedCountry = countrySpinner.getSelectedItem().toString();
+        		winStr=selectedCountry;
         		myDB.deletePerson(id);
         		String message = "Details Deleted";
         		Toast.makeText(UpdateActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -116,8 +119,8 @@ public class UpdateActivity extends Activity{
         	}
 
         });
+        myDB.close();
 	}
 
-	
 	
 }

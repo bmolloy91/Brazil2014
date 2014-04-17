@@ -10,24 +10,25 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
-public class Stars extends FragmentActivity implements ActionBar.TabListener
+public class Stadiums extends FragmentActivity implements ActionBar.TabListener
 {
 	
 	ViewPager viewPager;
-	PlayerTabsPagerAdapter mAdapter;
+	StadiumTabsPagerAdapter mAdapter;
 	ActionBar actionBar;
 	
 	//Tab titles
-	String[] tabs = {"5: Neymar", "4: Hazard", "3: Suarez", "2: Ronaldo", "1: Messi"};
+	String[] tabs = {"Belo Horizonte", "Brasilia", "Cuiaba", "Curitiba", "Fortaleza"
+			,"Manaus","Natal","Porto Alegre","Recife", "Rio de Janeiro", "Salvador", "Sao Paulo"};
 	
 	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-	    setContentView(R.layout.stars_activity);
+	    setContentView(R.layout.stadium_activity);
 	    
-	    viewPager = (ViewPager) findViewById(R.id.pager);
+	    viewPager = (ViewPager) findViewById(R.id.stadium_pager);
 		actionBar = getActionBar();
-		mAdapter = new PlayerTabsPagerAdapter(getSupportFragmentManager());
+		mAdapter = new StadiumTabsPagerAdapter(getSupportFragmentManager());
 
 		viewPager.setAdapter(mAdapter);
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);

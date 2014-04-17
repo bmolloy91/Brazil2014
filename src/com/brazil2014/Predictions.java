@@ -39,9 +39,7 @@ public class Predictions extends ListActivity implements View.OnClickListener{
 
 		myAdapter = new SimpleCursorAdapter(this, R.layout.people, myCursor, columns, to);
 		this.setListAdapter(myAdapter);
-		//ListView list = (ListView)findViewById(R.id.predictionList);
-		
-		//list.setAdapter(myAdapter);
+		;
 	}
 	
 	public void onClick (View view) {

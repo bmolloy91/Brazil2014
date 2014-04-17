@@ -60,14 +60,11 @@
         android:layout_height="wrap_content"
         android:text="@string/pickWin" />
 
-    <AutoCompleteTextView
-        android:id="@+id/Winner"
+    <Spinner
+        android:id="@+id/update_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/winnerHint"
-        android:inputType="textCapSentences"
-        android:textColor="@color/yellow" />
+         />
 
     <Button
         style="@style/mainBut1"

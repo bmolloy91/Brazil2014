@@ -48,5 +48,31 @@
 	<string name="suarez">Luis Suarez</string>
 	<string name="ronaldo">Cristiano Ronaldo</string>
 	<string name="messi">Lionel Messi</string>
+	<string name="stadiums">STADIUMS</string>
+		<string name="maracana">Maracana</string>
+			<string name="rio">Rio de Janeiro</string>
+		<string name="arenaCor">Arena Corinthians</string>
+			<string name="sao">Sao Paulo</string>
+		<string name="mineirao">Mineirão</string>
+			<string name="belo">Belo Horizonte</string>
+		<string name="estad">Estádio Nacional de Brasilia</string>
+			<string name="bras">Brasilia</string>
+		<string name="arenaCast">Arena Castelão</string>
+			<string name="fort">Fortaleza</string>
+		<string name="arenaFonte">Arena Fonte Nova</string>
+			<string name="sal">Salvador</string>
+		<string name="arenaPer">Arena Pernambuco</string>
+			<string name="porto">Porto Alegre</string>
+		<string name="estadBei">Estádio Beira-Rio</string>
+			<string name="recife">Recife</string>
+		<string name="arenaAma">Arena de Amazonia</string>
+			<string name="manaus">Manaus</string>
+		<string name="arenaPant">Arena Pantanal</string>
+			<string name="cui">Cuiaba</string>
+		<string name="arenaDun">Arena das Dunas</string>
+			<string name="natal">Natal</string>
+		<string name="arenaBaix">Arena da Baixada</string>
+			<string name="curi">Curitiba</string>
+			
 	
 </resources>

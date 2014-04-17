@@ -71,11 +71,11 @@
 		        android:layout_weight="1" >
 
 		        <Button
-		            android:id="@+id/teamBut"
+		            android:id="@+id/stadiumBut"
 		            style="@style/mainBut1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
-		            android:text="@string/teams" />
+		            android:text="@string/stadiums" />
 		    </TableRow>
 
 		    <TableRow

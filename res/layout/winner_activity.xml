@@ -60,21 +60,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pickWin"/>
+	
 
-    <AutoCompleteTextView
-        android:id="@+id/editWinner"
+    <Spinner
+        android:id="@+id/country_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/winnerHint"
-        android:inputType="textCapSentences"
-        android:textColor="@color/yellow" />
-
-    <Spinner 
-        android:id="@+id/country_spin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+         />
 
     <Button
         style="@style/mainBut1"
